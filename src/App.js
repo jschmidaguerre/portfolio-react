@@ -1,10 +1,12 @@
 import Header from "./componentes/header/Header";
-import Nav from "./componentes/header/Nav"
+import AboutMe from "./componentes/aboutme/AboutMe"
 function App() {
   return (
-    <div>
+    <div 
+    className="bg-zinc-700"
+    >
       <Header/>
-      <Nav/>
+      <AboutMe/>
     </div>
   );
 }
