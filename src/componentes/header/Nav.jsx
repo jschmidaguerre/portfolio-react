@@ -7,6 +7,8 @@ const Nav = () => {
     font-rajdhani
     text-white
     flex
+    text-xs
+    md:text-xl
     items-center
     gap-6
     '

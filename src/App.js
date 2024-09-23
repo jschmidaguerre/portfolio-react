@@ -2,9 +2,7 @@ import Header from "./componentes/header/Header";
 import AboutMe from "./componentes/aboutme/AboutMe"
 function App() {
   return (
-    <div 
-    className="bg-zinc-700"
-    >
+    <div>
       <Header/>
       <AboutMe/>
     </div>

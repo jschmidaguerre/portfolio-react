@@ -6,7 +6,7 @@ const Logo = () => {
     <div className='flex justify-between'>
       <h1 className="
         font-rajdhani 
-        text-5xl
+        md:text-5xl
         m-4
         text-white
         ">

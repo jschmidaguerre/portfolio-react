@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className='
     bg-zinc-800
-    border-b-8
+    border-b-4
     border-black
     '>
       <Logo/>

@@ -13,7 +13,7 @@ const Img = () => {
         className='
         w-80
         rounded-full
-        border-8
+        border-4
         border-black
         my-20
         '

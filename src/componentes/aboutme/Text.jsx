@@ -9,8 +9,9 @@ const Text = () => {
     text-3xl
     '>        
         <p>
-            👋¡Hey there! 
+            ¡Hey there! 
         </p>
+        <h1>I´m a Full Stack & Software Developer from Argentina.</h1>
    </div>
   )
 }
