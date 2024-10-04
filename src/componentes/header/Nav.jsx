@@ -17,6 +17,8 @@ const Nav = () => {
       className='hover:text-slate-400 nav-link'>About me</a>
       <a href="#my-projects"
       className='hover:text-slate-400 nav-link'>My Projects</a>
+      <a href="#education"
+      className='hover:text-slate-400 nav-link'>Education</a>
       <a href="https://github.com/jschmidaguerre?tab=repositories"
       className='mr-8 hover:text-slate-400 nav-link'>Github</a>
     </nav>
