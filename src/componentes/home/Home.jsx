@@ -1,20 +1,24 @@
+// src/components/Home.jsx
+
+import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { FaChevronDown } from 'react-icons/fa';
-import Photo from './developing.png'
+
 const Home = () => {
-
-
   return (
     <section
       id="home"
       className="min-h-screen flex items-center bg-gradient-to-b from-gray-900 to-gray-800 text-white relative"
     >
-     
-
       {/* Background Animation */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="bg-gradient-to-b from-teal-500 to-transparent opacity-20 w-full h-full"></div>
-        {/* Puedes añadir más elementos animados aquí */}
+        <div
+          className="bg-gradient-to-b from-teal-500 to-transparent opacity-20 w-full h-full"
+          style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL}/img/background-animation.png)`, // Optional: Add a background animation image
+          }}
+        ></div>
+        {/* You can add more animated elements here */}
       </div>
 
       {/* Content */}
@@ -31,14 +35,16 @@ const Home = () => {
 
             {/* Buttons */}
             <div className="flex space-x-4">
-              <a
-                href="#projects"
-                className="bg-teal-500 text-white px-6 py-3 rounded-md hover:bg-teal-400 transition duration-300"
+              <ScrollLink
+                to="projects"
+                smooth={true}
+                duration={500}
+                className="bg-teal-500 text-white px-6 py-3 rounded-md hover:bg-teal-400 transition duration-300 cursor-pointer"
               >
                 View My Projects
-              </a>
+              </ScrollLink>
               <a
-                href="/img/CV Juan Segundo Schmid Aguerre (English).pdf"
+                href={`${process.env.PUBLIC_URL}/img/CV_Juan_Segundo_Schmid_Aguerre_English.pdf`}
                 download
                 className="border border-teal-500 text-teal-500 px-6 py-3 rounded-md hover:bg-teal-500 hover:text-white transition duration-300"
               >
@@ -50,7 +56,7 @@ const Home = () => {
           {/* Right Column: Image */}
           <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
             <img
-              src={Photo}
+              src={`${process.env.PUBLIC_URL}/img/developing.png`}
               alt="Developer at Work"
               className="w-72 h-72 md:w-96 md:h-96 object-contain transform hover:scale-105 transition duration-500"
             />

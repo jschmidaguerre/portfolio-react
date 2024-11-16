@@ -54,13 +54,13 @@ const TechStack = () => {
       <div
         className="absolute inset-0 bg-fixed bg-cover bg-center opacity-10"
         style={{
-          backgroundImage: "url('img/techstack.jpg')",
+          backgroundImage: `url(${process.env.PUBLIC_URL}/img/techstack.jpg)`,
         }}
       ></div>
 
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">
-        <h2 className="flex justify-center text-4xl font-bold mb-10 ">Tech Stack</h2>
+        <h2 className="flex justify-center text-4xl font-bold mb-10">Tech Stack</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {techStack.map((tech, index) => (
             <div
