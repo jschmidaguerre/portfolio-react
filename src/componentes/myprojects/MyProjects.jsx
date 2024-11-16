@@ -1,55 +1,45 @@
 import React from 'react';
 
-const projectsData = [
+const projects = [
   {
-    id: 1,
-    title: 'Project One',
-    description: 'A brief description of Project One.',
-    imageUrl: 'https://via.placeholder.com/150', // Replace with actual image URL
-    projectUrl: 'https://yourprojectlink.com',   // Replace with actual project link
-  }
-  
+    title: 'OCR Document Processing Application',
+    description: 'This project is a web application that allows users to upload documents and process them using AWS Textract for Optical Character Recognition (OCR). Additionally, it implements a Large Scale Language Model (LLM) to improve the accuracy and processing of the extracted information, providing key data in clean and structured JSON format.',
+    image: 'img/magnifying-33170_1280.png', // Reemplaza con la ruta a una imagen representativa
+    link: 'https://github.com/jschmidaguerre/OCR-LLM-Document-Processing-Application', // Enlace al repositorio o demo
+    tags: ['AWS', 'Textract', 'LLM', 'Flask', 'Next.js']
+  },
+  // Agrega más proyectos aquí
 ];
 
-const MyProjects = () => {
+const Projects = () => {
   return (
-    <section className="bg-zinc-700 py-12 relative" id='my-projects'>
-      {/* Decorative Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-r from-zinc-800 to-zinc-600 opacity-75 rounded-lg"></div>
-
-      <div className="container mx-auto px-6 relative z-10">
-        <h2 className="text-4xl font-bold text-white text-center mb-12 animate-fadeIn">My Projects</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {projectsData.map((project) => (
-            <div 
-              key={project.id} 
-              className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
-            >
-              {/* Image Section */}
-              <div className="relative group">
-                <img 
-                  src={project.imageUrl} 
-                  alt={project.title} 
-                  className="w-full h-48 object-cover transition-opacity duration-300 group-hover:opacity-80"
-                />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-90 bg-black bg-opacity-50 transition-opacity duration-300">
-                  <p className="text-white font-semibold text-lg">View Project</p>
+    <section id="projects" className="py-20 bg-gray-900 text-white">
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-bold mb-12 text-center">My Projects</h2>
+        <div className="flex flex-wrap -mx-4">
+          {projects.map((project, index) => (
+            <div key={index} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+              <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img src={project.image} alt={project.title} className="w-3/4 h-56 object-cover mx-auto" />
+                <div className="p-6">
+                  <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
+                  <p className="text-gray-400 mb-4">{project.description}</p>
+                  <div className="flex flex-wrap mb-4">
+                    {project.tags.map((tag, idx) => (
+                      <span key={idx} className="bg-teal-500 text-white text-sm px-2 py-1 rounded-full mr-2 mb-2">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-400 transition duration-300"
+                  >
+                    View Proyect
+                  </a>
                 </div>
-              </div>
-
-              {/* Text Section */}
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <a
-                  href={project.projectUrl}
-                  className="inline-block bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-600 transition"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit Site
-                </a>
               </div>
             </div>
           ))}
@@ -59,4 +49,4 @@ const MyProjects = () => {
   );
 };
 
-export default MyProjects;
+export default Projects;

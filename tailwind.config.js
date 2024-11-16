@@ -1,13 +1,18 @@
-/** @type {import('tailwindcss').Config} */
-
-
-export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}",],
-  theme:{
+module.exports = {
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  darkMode: false, // o 'media' o 'class'
+  theme: {
     extend: {
       fontFamily: {
-        rajdhani: ["Rajdhani", "sans-serif"]
-      }
-    }
-  }
-}
+        sans: ['Rajdhani', 'sans-serif'],
+      },
+      animation: {
+        // Define tus animaciones personalizadas aquí
+      },
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+};

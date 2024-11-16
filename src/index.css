@@ -5,7 +5,6 @@
 
 body {
   @apply bg-zinc-600;
-  @apply font-rajdhani;
 }
 .nav-link {
     position: relative;
