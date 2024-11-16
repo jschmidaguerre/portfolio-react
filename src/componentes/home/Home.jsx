@@ -44,11 +44,11 @@ const Home = () => {
                 View My Projects
               </ScrollLink>
               <a
-                href={`${process.env.PUBLIC_URL}/img/CV_Juan_Segundo_Schmid_Aguerre.pdf`}
-                download={`${process.env.PUBLIC_URL}/img/CV_Juan_Segundo_Schmid_Aguerre.pdf`}
-                className="border border-teal-500 text-teal-500 px-6 py-3 rounded-md hover:bg-teal-500 hover:text-white transition duration-300"
+              href={`${process.env.PUBLIC_URL}/img/CV_Juan_Segundo_Schmid_Aguerre.pdf`}
+              download="CV_Juan_Segundo_Schmid_Aguerre.pdf" // Only the filename
+              className="border border-teal-500 text-teal-500 px-6 py-3 rounded-md hover:bg-teal-500 hover:text-white transition duration-300"
               >
-                Download CV
+              Download CV
               </a>
             </div>
           </div>
