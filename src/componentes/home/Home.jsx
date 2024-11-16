@@ -1,6 +1,6 @@
 import { Link as ScrollLink } from 'react-scroll';
 import { FaChevronDown } from 'react-icons/fa';
-
+import Photo from './developing.png'
 const Home = () => {
 
 
@@ -50,7 +50,7 @@ const Home = () => {
           {/* Right Column: Image */}
           <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
             <img
-              src="/img/developing.png"
+              src={Photo}
               alt="Developer at Work"
               className="w-72 h-72 md:w-96 md:h-96 object-contain transform hover:scale-105 transition duration-500"
             />
