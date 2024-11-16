@@ -44,7 +44,7 @@ const Home = () => {
                 View My Projects
               </ScrollLink>
               <a
-                href={`${process.env.PUBLIC_URL}/img/CV_Juan_Segundo_Schmid_Aguerre_English.pdf`}
+                href={`${process.env.PUBLIC_URL}/img/CV_Juan_Segundo_Schmid_Aguerre.pdf`}
                 download
                 className="border border-teal-500 text-teal-500 px-6 py-3 rounded-md hover:bg-teal-500 hover:text-white transition duration-300"
               >
