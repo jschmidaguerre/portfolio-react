@@ -11,7 +11,13 @@ const projects = [
     link: 'https://github.com/jschmidaguerre/OCR-LLM-Document-Processing-Application', // Link to the repository or demo
     tags: ['AWS', 'Textract', 'LLM', 'Flask', 'Next.js'],
   },
-  // Add more projects here
+  {
+    title: 'Inventory-Management-System',
+    description: 'The Inventory Management System is a full-stack web application designed to help businesses efficiently manage their product inventory. Built with a robust Spring Boot backend and a dynamic ReactJS frontend, this system provides comprehensive CRUD (Create, Read, Update, Delete) functionalities for managing products.',
+    image: `${process.env.PUBLIC_URL}/img/Inventory-management-system-mediasoft.png`,
+    link: 'https://github.com/jschmidaguerre/Inventory-Management-System',
+    tags: ['Java', 'SpringBoot', 'SQL', 'React']
+  }
 ];
 
 const Projects = () => {
