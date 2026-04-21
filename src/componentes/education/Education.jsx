@@ -1,74 +1,118 @@
 import React from 'react';
-import { FaGraduationCap } from 'react-icons/fa'; // Importamos un icono de react-icons
+import { FaGraduationCap, FaCertificate } from 'react-icons/fa';
 
 const educationData = [
   {
-    id: 3,
-    degree: 'Computer Science Engineering',
-    institution: 'Argentine Business University (UADE)',
-    location: 'Buenos Aires, Argentina',
-    year: '2022-2027 (Expected)',
-    description: 'Training in both technical aspects, management and managerial tasks. Regarding the technical aspect, I will be able to perform in the different activities of software development such as programming itself, but also in the analysis, design and architecture of systems.'
-  },
-  {
     id: 1,
-    degree: 'University Technician in Software Development',
-    institution: 'Argentine Business University (UADE)',
+    degree: 'Systems Engineering',
+    institution: 'Universidad Argentina de la Empresa (UADE)',
     location: 'Buenos Aires, Argentina',
-    year: '2022 - 2025',
+    year: '2022 — Present',
     description:
-      'Focus on software engineering principles, system design and practical programming on various platforms.',
+      'In-depth training in both the technical and managerial sides of software engineering: analysis, design, architecture and delivery of full systems.',
   },
   {
     id: 2,
-    degree: 'University Diploma in Full Stack Web Development',
-    institution: 'Argentine Business University (UADE)',
+    degree: 'University Technician in Software Development',
+    institution: 'Universidad Argentina de la Empresa (UADE)',
     location: 'Buenos Aires, Argentina',
-    year: '2021 - 2022',
+    year: '2021 — 2023 · Completed',
     description:
-      'Specialization in Full Stack development, programming languages ​​and project management.',
-  }
+      'Intensive training in software engineering principles, system design and practical programming across multiple platforms.',
+  },
+  {
+    id: 3,
+    degree: 'University Diploma in Full Stack Web Development',
+    institution: 'Universidad Argentina de la Empresa (UADE)',
+    location: 'Buenos Aires, Argentina',
+    year: '2021 — 2022 · Completed',
+    description:
+      'Specialization in full-stack web development, modern programming languages and project management fundamentals.',
+  },
+];
+
+const trainings = [
+  'Python for Data Science & Machine Learning',
+  'SAP Automation & Integration',
+  'MERN Stack (MongoDB, Express, React, Node.js)',
+  'SQL Server Database Administration',
+  'Scrum Master Professional Certificate',
+  'Angular Development',
+  'Process Automation with Python',
+  'Machine Learning & Artificial Intelligence',
+  'DevOps & Containerization with Docker',
 ];
 
 const Education = () => {
   return (
-    <section id="education" className="py-20 bg-gray-900 text-white relative">
-      {/* Decorative Background */}
-      <div
-        className="absolute inset-0 bg-fixed bg-cover bg-center opacity-10"
-        style={{ backgroundImage: "url('img/background-pattern.png')" }}
-      ></div>
+    <section id="education" className="relative py-24">
+      <div className="container-narrow">
+        <div className="text-center mb-14">
+          <span className="section-eyebrow">Education</span>
+          <h2 className="section-title">
+            Academic &amp; <span className="gradient-text">continuous learning</span>
+          </h2>
+          <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
+            University foundations backed by a long list of specialized certifications —
+            from data science and ML to DevOps and enterprise SAP.
+          </p>
+        </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <h2 className="text-4xl font-bold mb-12 text-center">Education</h2>
-        <div className="relative">
-          
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-4 border-teal-500"></div>
-
-          <div className="space-y-12">
-            {educationData.map((edu, index) => (
+        <div className="grid lg:grid-cols-5 gap-8">
+          <div className="lg:col-span-3 space-y-6">
+            {educationData.map((edu) => (
               <div
                 key={edu.id}
-                className={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''
-                  }`}
+                className="card p-6 hover:-translate-y-1 transition duration-300"
               >
-                {/* Contenido */}
-                <div className="md:w-1/2 md:px-8">
-                  <div className="bg-gray-800 rounded-lg p-6 shadow-lg transform hover:scale-105 transition duration-500">
-                    <h3 className="text-2xl font-semibold mb-2">{edu.degree}</h3>
-                    <h4 className="text-xl text-teal-400 font-medium">{edu.institution}</h4>
-                    <p className="text-gray-400 italic mb-1">{edu.location}</p>
-                    <p className="text-gray-500 mb-4">{edu.year}</p>
-                    <p className="text-gray-300 leading-relaxed">{edu.description}</p>
+                <div className="flex items-start gap-4">
+                  <span className="w-11 h-11 rounded-xl grid place-items-center bg-gradient-to-br from-brand-500/20 to-accent-500/20 text-accent-400 text-xl flex-shrink-0">
+                    <FaGraduationCap />
+                  </span>
+                  <div className="flex-1">
+                    <h3 className="font-display text-lg font-semibold">{edu.degree}</h3>
+                    <p className="text-accent-400 text-sm">{edu.institution}</p>
+                    <div className="mt-1 flex flex-wrap gap-3 text-xs font-mono uppercase tracking-wider text-slate-500">
+                      <span>{edu.location}</span>
+                      <span>·</span>
+                      <span>{edu.year}</span>
+                    </div>
+                    <p className="mt-3 text-slate-400 text-sm leading-relaxed">
+                      {edu.description}
+                    </p>
                   </div>
-                </div>
-
-                {/* Punto en la línea de tiempo */}
-                <div className="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center text-white text-2xl shadow-lg z-10">
-                  <FaGraduationCap />
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="lg:col-span-2">
+            <div className="card p-6 h-full">
+              <div className="flex items-center gap-3 mb-5">
+                <span className="w-10 h-10 rounded-lg grid place-items-center bg-gradient-to-br from-brand-500/20 to-accent-500/20 text-accent-400">
+                  <FaCertificate />
+                </span>
+                <h3 className="font-display text-lg font-semibold">Complementary training</h3>
+              </div>
+              <ul className="space-y-3">
+                {trainings.map((t) => (
+                  <li key={t} className="flex items-start gap-3 text-sm text-slate-300">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent-400 flex-shrink-0" />
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-6 pt-6 border-t border-white/5">
+                <p className="text-xs font-mono uppercase tracking-widest text-slate-500 mb-2">
+                  Languages
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="pill">Spanish · Native</span>
+                  <span className="pill">English · Advanced</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
