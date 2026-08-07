@@ -58,9 +58,17 @@ const AboutMe = () => {
 
             <p className="mt-4 text-slate-400 leading-relaxed">
               My flagship is{' '}
-              <span className="text-accent-400 font-medium">Spom Bridge</span>, a multi-tenant
-              e-invoicing SaaS I architected, built and still operate on my own — front-end,
-              back-end, database, auth and deploy. It talks to{' '}
+              <a
+                href="https://app.spomsolutions.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent-400 font-medium underline decoration-accent-400/40 underline-offset-4 hover:decoration-accent-400"
+              >
+                Spom Bridge
+              </a>
+              {' '}(app.spomsolutions.com), a multi-tenant e-invoicing SaaS I architected, built
+              and still operate on my own — front-end, back-end, database, auth and deploy. It
+              talks to{' '}
               <span className="text-slate-200 font-medium">AFIP/ARCA over SOAP</span>, Mercado
               Libre, Tiendanube and Mercado Pago, and it has to be right every time: an invoice
               that fails silently is a legal problem, not a bug report.

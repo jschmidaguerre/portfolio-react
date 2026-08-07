@@ -81,9 +81,17 @@ const Home = () => {
               that run in production — <span className="text-accent-400 font-medium">FastAPI</span>{' '}
               services, multi-tenant architecture, resilient integrations and{' '}
               <span className="text-accent-400 font-medium">LLM / Document-AI pipelines</span>.
-              Creator of <span className="text-white font-semibold">Spom Bridge</span>, a
-              multi-tenant e-invoicing SaaS I architected, shipped and still run solo — front-end,
-              back-end, auth, observability and deploy.
+              Creator of{' '}
+              <a
+                href="https://app.spomsolutions.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-semibold underline decoration-accent-400/50 underline-offset-4 hover:decoration-accent-400"
+              >
+                Spom Bridge
+              </a>
+              , a multi-tenant e-invoicing SaaS I architected, shipped and still run solo —
+              front-end, back-end, auth, observability and deploy.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">

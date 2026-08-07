@@ -11,6 +11,8 @@ const projects = [
       'An e-invoicing SaaS I architected, built and still run on my own: FastAPI + PostgreSQL + Redis, 40+ domain modules with per-tenant isolation, deployed on Docker/Railway. It authorizes invoices against Argentina’s tax authority over SOAP (WSAA certificate signing, WSFE/CAE) with idempotency keys and a reconciliation state machine, and syncs orders and payments from Mercado Libre, Tiendanube and Mercado Pago via OAuth2 and signed webhooks. 250+ tests gate every merge; Sentry catches what they miss.',
     image: `${process.env.PUBLIC_URL}/img/developing.png`,
     tags: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'React', 'TypeScript', 'Docker'],
+    live: 'https://app.spomsolutions.com',
+    liveLabel: 'app.spomsolutions.com',
     private: true,
   },
   {
@@ -62,6 +64,7 @@ const projects = [
 
 const ProjectCard = ({ project }) => {
   const hasLink = !!project.link;
+  const hasLive = !!project.live;
   return (
     <div
       className={`card group overflow-hidden flex flex-col h-full transition duration-300 hover:-translate-y-1 ${
@@ -103,20 +106,33 @@ const ProjectCard = ({ project }) => {
           ))}
         </div>
 
-        {hasLink ? (
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary w-full !py-2.5 text-sm"
-          >
-            <FaGithub /> View on GitHub
-          </a>
-        ) : (
-          <div className="btn-ghost w-full !py-2.5 text-sm cursor-default !border-white/10 !text-slate-500">
-            <FaLock size={12} /> Private repository
-          </div>
-        )}
+        <div className="flex flex-col gap-2">
+          {hasLive && (
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary w-full !py-2.5 text-sm"
+            >
+              <FaExternalLinkAlt size={12} /> {project.liveLabel || 'Visit the live app'}
+            </a>
+          )}
+
+          {hasLink ? (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`w-full !py-2.5 text-sm ${hasLive ? 'btn-ghost' : 'btn-primary'}`}
+            >
+              <FaGithub /> View on GitHub
+            </a>
+          ) : (
+            <div className="btn-ghost w-full !py-2.5 text-sm cursor-default !border-white/10 !text-slate-500">
+              <FaLock size={12} /> {hasLive ? 'Source is private' : 'Private repository'}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

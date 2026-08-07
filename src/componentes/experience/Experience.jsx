@@ -7,6 +7,7 @@ const experiences = [
     company: 'Spom Bridge — Spom Solutions',
     sector: 'Independent SaaS product · Live in production',
     period: '2025 — Present',
+    live: 'https://app.spomsolutions.com',
     highlights: [
       'Architected and operate a multi-tenant SaaS in production on FastAPI, PostgreSQL and Redis, containerized with Docker on Railway — 40+ domain modules with strict per-tenant data isolation.',
       'Integrated the AFIP/ARCA SOAP web services (WSAA certificate signing, WSFE invoice authorization) so every sale is invoiced with no manual step — solved the non-idempotent tax API with per-document idempotency keys, token caching, bounded retries and a reconciliation state machine.',
@@ -83,6 +84,19 @@ const Experience = () => {
                       </div>
                       <p className="text-xs font-mono uppercase tracking-widest text-slate-500 mb-4">
                         {exp.period}
+                        {exp.live && (
+                          <>
+                            {' · '}
+                            <a
+                              href={exp.live}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-accent-400 hover:text-accent-300 normal-case tracking-normal"
+                            >
+                              {exp.live.replace('https://', '')} ↗
+                            </a>
+                          </>
+                        )}
                       </p>
 
                       <ul className="space-y-2">
