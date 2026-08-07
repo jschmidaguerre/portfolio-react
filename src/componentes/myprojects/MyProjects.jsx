@@ -6,18 +6,18 @@ const projects = [
   {
     flagship: true,
     title: 'Spom Bridge',
-    category: 'Full-Stack SAAS · Built solo',
+    category: 'Multi-tenant SaaS · In production · Built & operated solo',
     description:
-      'A production SAAS product I designed, engineered and shipped end-to-end on my own — from architecture and UX to front-end, back-end, database, auth, payments and deploy. My main full-stack development.',
+      'An e-invoicing SaaS I architected, built and still run on my own: FastAPI + PostgreSQL + Redis, 40+ domain modules with per-tenant isolation, deployed on Docker/Railway. It authorizes invoices against Argentina’s tax authority over SOAP (WSAA certificate signing, WSFE/CAE) with idempotency keys and a reconciliation state machine, and syncs orders and payments from Mercado Libre, Tiendanube and Mercado Pago via OAuth2 and signed webhooks. 250+ tests gate every merge; Sentry catches what they miss.',
     image: `${process.env.PUBLIC_URL}/img/developing.png`,
-    tags: ['React', 'Node.js', 'REST API', 'Database', 'SAAS', 'Claude Code'],
+    tags: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'React', 'TypeScript', 'Docker'],
     private: true,
   },
   {
     title: 'Scienza Document Automation',
     category: 'Enterprise AI · Pharmaceutical',
     description:
-      'Re-architected the full document-reception workflow of a pharma company using Document AI, OCR and Python pipelines. Eliminated manual data entry and cut operational time by up to 70%.',
+      'Re-architected the document-reception workflow of a pharma distributor with Document AI and OCR, layered with an LLM that turns messy scans into schema-validated JSON the downstream systems can trust. Removed manual data entry from a compliance-sensitive process and cut operational time by up to 70%.',
     image: `${process.env.PUBLIC_URL}/img/automation.png`,
     tags: ['Python', 'Document AI', 'OCR', 'LLMs', 'Flask', 'Pandas'],
     private: true,
@@ -132,10 +132,9 @@ const Projects = () => {
             Projects I&apos;ve <span className="gradient-text">built &amp; shipped</span>
           </h2>
           <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
-            From a full-stack SAAS I built solo to enterprise-grade AI automation.
-            Every project is engineered <span className="text-accent-400 font-medium">AI-First</span>,
-            with <span className="text-accent-400 font-medium">Claude Code</span> as my core
-            development partner.
+            A multi-tenant SaaS with paying customers, enterprise AI automation, and smaller
+            builds where I was learning something specific. Some repositories are private —
+            happy to walk through the architecture and code on a call.
           </p>
         </div>
 

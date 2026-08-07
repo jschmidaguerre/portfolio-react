@@ -36,11 +36,12 @@ const ContactMe = () => {
         <div className="text-center mb-14">
           <span className="section-eyebrow">Contact</span>
           <h2 className="section-title">
-            Let&apos;s <span className="gradient-text">build something</span>
+            Let&apos;s <span className="gradient-text">talk</span>
           </h2>
           <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
-            Have a project in mind? Need an AI-First full-stack partner? I&apos;m happy to chat —
-            drop me a message and I&apos;ll get back to you.
+            I&apos;m open to remote backend and AI engineering roles. If you&apos;re hiring — or
+            just want to dig into how the AFIP integration works — drop me a line and I&apos;ll
+            get back to you within a day.
           </p>
         </div>
 
@@ -113,9 +114,10 @@ const ContactMe = () => {
                 Working with me
               </p>
               <p className="text-sm text-slate-300 leading-relaxed">
-                I work remote-first across Spanish and English-speaking teams. Happy to tackle
-                new full-stack builds, AI integrations, automation pipelines and one-off
-                consulting.
+                Remote-first, based in Buenos Aires (GMT-3) — a full overlap with US Eastern
+                business hours and a workable one with most of Europe. I work in English and
+                Spanish. Looking for backend or AI engineering roles where the hard part is
+                integration, resilience and data.
               </p>
             </div>
           </div>

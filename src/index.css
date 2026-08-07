@@ -45,8 +45,13 @@ body {
     @apply max-w-6xl mx-auto px-6;
   }
 
+  /* NOTE: do not rebuild this with `from-* via-* to-*` utilities via @apply —
+     the `via-*` transparent fallback overrode `--tw-gradient-to`, so the
+     gradient ended at rgba(34,211,238,0) and the text faded into the
+     background mid-word. Declared explicitly so the end colour is real. */
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-400 via-accent-400 to-brand-300;
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #50b3ff 0%, #22d3ee 50%, #88cfff 100%);
   }
 
   .section-title {

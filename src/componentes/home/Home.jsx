@@ -4,11 +4,10 @@ import { FaChevronDown, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import { HiSparkles } from 'react-icons/hi2';
 
 const ROLES = [
-  'AI-First Full-Stack Developer',
-  'SAAS Builder — Spom Bridge',
-  'Systems Engineer',
-  'Python Automation Specialist',
-  'Process Analyst',
+  'production backends in Python',
+  'multi-tenant SaaS — Spom Bridge',
+  'hard third-party integrations',
+  'LLM & Document-AI pipelines',
 ];
 
 const useTyped = (words, speed = 80, pause = 1600) => {
@@ -62,31 +61,29 @@ const Home = () => {
           <div className="lg:col-span-3 animate-fade-in-up">
             <span className="pill !border-accent-400/40 !text-accent-400 !bg-accent-400/10 mb-5">
               <HiSparkles className="text-accent-400" />
-              Available for new projects · Buenos Aires, Argentina
+              Open to remote roles · Buenos Aires, Argentina · GMT-3
             </span>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-[1.05] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-[3.25rem] font-display font-bold leading-[1.08] tracking-tight break-words">
               Hi, I&apos;m{' '}
               <span className="gradient-text">Juan Segundo</span>
               <br />
-              <span className="text-slate-300 text-3xl sm:text-4xl lg:text-5xl font-semibold">
+              <span className="text-slate-300 text-2xl sm:text-3xl lg:text-4xl font-semibold">
                 I build{' '}
                 <span className="gradient-text">{typed}</span>
-                <span className="inline-block w-[3px] h-8 sm:h-10 lg:h-12 bg-accent-400 align-middle ml-1 animate-blink" />
+                <span className="inline-block w-[3px] h-6 sm:h-8 lg:h-9 bg-accent-400 align-middle ml-1 animate-blink" />
               </span>
             </h1>
 
             <p className="mt-6 text-lg text-slate-300/90 max-w-2xl leading-relaxed">
-              <span className="text-white font-semibold">AI-First Full-Stack Developer</span> &amp;
-              Systems Engineer. I design, build and ship products end-to-end — from the{' '}
-              <span className="text-accent-400 font-medium">React front-end</span> to the{' '}
-              <span className="text-accent-400 font-medium">Python/Node backend</span>,
-              databases and intelligent automations with{' '}
-              <span className="text-accent-400 font-medium">LLMs and Document AI</span>.
+              <span className="text-white font-semibold">Python Backend &amp; AI Engineer.</span> I
+              design, build and <span className="text-white font-semibold">operate</span> systems
+              that run in production — <span className="text-accent-400 font-medium">FastAPI</span>{' '}
+              services, multi-tenant architecture, resilient integrations and{' '}
+              <span className="text-accent-400 font-medium">LLM / Document-AI pipelines</span>.
               Creator of <span className="text-white font-semibold">Spom Bridge</span>, a
-              full-stack SAAS I designed and built solo. Every line is engineered with{' '}
-              <span className="text-accent-400 font-medium">Claude Code</span> as my core
-              development partner.
+              multi-tenant e-invoicing SaaS I architected, shipped and still run solo — front-end,
+              back-end, auth, observability and deploy.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -133,8 +130,8 @@ const Home = () => {
               </a>
               <div className="h-5 w-px bg-white/10" />
               <div className="flex items-center gap-6 text-xs font-mono uppercase tracking-wider">
-                <span><span className="text-accent-400">1</span> SAAS shipped solo</span>
-                <span><span className="text-accent-400">5+</span> yrs full-stack</span>
+                <span><span className="text-accent-400">1</span> SaaS shipped &amp; operated solo</span>
+                <span><span className="text-accent-400">250+</span> tests in CI</span>
                 <span><span className="text-accent-400">70%</span> ops time saved</span>
               </div>
             </div>
@@ -153,13 +150,13 @@ const Home = () => {
                 />
               </div>
               <div className="absolute -top-2 -right-2 card px-3 py-2 text-xs font-mono animate-float">
-                <span className="text-accent-400">$</span> claude code
+                <span className="text-accent-400">$</span> uvicorn app:main
               </div>
               <div
                 className="absolute -bottom-2 -left-4 card px-3 py-2 text-xs font-mono animate-float"
                 style={{ animationDelay: '1.2s' }}
               >
-                <span className="text-accent-400">🤖</span> AI-First
+                <span className="text-accent-400">●</span> in production
               </div>
             </div>
           </div>

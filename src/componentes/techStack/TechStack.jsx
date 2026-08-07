@@ -2,7 +2,6 @@ import React from 'react';
 import {
   DiPython,
   DiReact,
-  DiNodejs,
   DiMongodb,
   DiJava,
   DiJavascript1,
@@ -19,27 +18,32 @@ import {
   SiTypescript,
   SiFlask,
   SiDjango,
+  SiFastapi,
   SiPandas,
   SiNumpy,
   SiSelenium,
   SiGithub,
   SiAmazonwebservices,
   SiOpenai,
+  SiRedis,
+  SiPytest,
+  SiSentry,
 } from 'react-icons/si';
-import { FaFileExcel, FaDatabase } from 'react-icons/fa';
+import { FaDatabase, FaLock } from 'react-icons/fa';
 import { HiSparkles, HiCodeBracket, HiServerStack, HiCpuChip, HiWrenchScrewdriver } from 'react-icons/hi2';
 
 const CATEGORIES = [
   {
-    title: 'AI & Intelligent tooling',
-    icon: <HiSparkles />,
+    title: 'Backend & APIs',
+    icon: <HiServerStack />,
     accent: true,
     items: [
-      { name: 'Claude Code', icon: <HiSparkles /> },
-      { name: 'LLMs / GPT', icon: <SiOpenai /> },
-      { name: 'Document AI', icon: <HiCpuChip /> },
-      { name: 'AWS Textract', icon: <SiAmazonwebservices /> },
-      { name: 'AI Agents', icon: <HiSparkles /> },
+      { name: 'FastAPI', icon: <SiFastapi /> },
+      { name: 'Flask', icon: <SiFlask /> },
+      { name: 'Django', icon: <SiDjango /> },
+      { name: 'REST APIs', icon: <SiPostman /> },
+      { name: 'OAuth2 / JWT', icon: <FaLock /> },
+      { name: 'Node.js / Express', icon: <SiExpress /> },
     ],
   },
   {
@@ -47,53 +51,54 @@ const CATEGORIES = [
     icon: <HiCodeBracket />,
     items: [
       { name: 'Python', icon: <DiPython /> },
-      { name: 'JavaScript', icon: <DiJavascript1 /> },
       { name: 'TypeScript', icon: <SiTypescript /> },
-      { name: 'Java', icon: <DiJava /> },
+      { name: 'JavaScript', icon: <DiJavascript1 /> },
       { name: 'SQL', icon: <SiMicrosoftsqlserver /> },
+      { name: 'Java', icon: <DiJava /> },
     ],
   },
   {
-    title: 'Frontend',
-    icon: <HiCodeBracket />,
+    title: 'Data & storage',
+    icon: <FaDatabase />,
+    items: [
+      { name: 'PostgreSQL', icon: <DiPostgresql /> },
+      { name: 'Redis', icon: <SiRedis /> },
+      { name: 'MongoDB', icon: <DiMongodb /> },
+      { name: 'SQL Server', icon: <SiMicrosoftsqlserver /> },
+      { name: 'Pandas / NumPy', icon: <SiPandas /> },
+    ],
+  },
+  {
+    title: 'AI & document intelligence',
+    icon: <HiSparkles />,
+    items: [
+      { name: 'Claude API', icon: <HiSparkles /> },
+      { name: 'LLMs / GPT', icon: <SiOpenai /> },
+      { name: 'Google Document AI', icon: <HiCpuChip /> },
+      { name: 'AWS Textract', icon: <SiAmazonwebservices /> },
+      { name: 'Structured output', icon: <SiNumpy /> },
+    ],
+  },
+  {
+    title: 'Infra, CI & observability',
+    icon: <HiWrenchScrewdriver />,
+    items: [
+      { name: 'Docker', icon: <DiDocker /> },
+      { name: 'Railway', icon: <HiServerStack /> },
+      { name: 'Pytest', icon: <SiPytest /> },
+      { name: 'Sentry', icon: <SiSentry /> },
+      { name: 'Git / GitHub', icon: <SiGithub /> },
+    ],
+  },
+  {
+    title: 'Front-end & automation',
+    icon: <DiReact />,
     items: [
       { name: 'React', icon: <DiReact /> },
       { name: 'Next.js', icon: <SiNextdotjs /> },
       { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
-    ],
-  },
-  {
-    title: 'Backend & APIs',
-    icon: <HiServerStack />,
-    items: [
-      { name: 'Node.js', icon: <DiNodejs /> },
-      { name: 'Express', icon: <SiExpress /> },
-      { name: 'Flask', icon: <SiFlask /> },
-      { name: 'Django', icon: <SiDjango /> },
-      { name: 'REST APIs', icon: <SiPostman /> },
-    ],
-  },
-  {
-    title: 'Data, Scraping & Automation',
-    icon: <HiCpuChip />,
-    items: [
-      { name: 'Pandas', icon: <SiPandas /> },
-      { name: 'NumPy', icon: <SiNumpy /> },
       { name: 'Selenium', icon: <SiSelenium /> },
-      { name: 'SAP', icon: <FaDatabase /> },
-      { name: 'Excel (Expert)', icon: <FaFileExcel /> },
-    ],
-  },
-  {
-    title: 'Databases, DevOps & Tools',
-    icon: <HiWrenchScrewdriver />,
-    items: [
-      { name: 'MongoDB', icon: <DiMongodb /> },
-      { name: 'PostgreSQL', icon: <DiPostgresql /> },
-      { name: 'SQL Server', icon: <SiMicrosoftsqlserver /> },
-      { name: 'Docker', icon: <DiDocker /> },
-      { name: 'Git / GitHub', icon: <SiGithub /> },
-      { name: 'Git', icon: <DiGit /> },
+      { name: 'SAP integration', icon: <DiGit /> },
     ],
   },
 ];
@@ -105,12 +110,11 @@ const TechStack = () => {
         <div className="text-center mb-14">
           <span className="section-eyebrow">Tech Stack</span>
           <h2 className="section-title">
-            Tools that <span className="gradient-text">build the future</span>
+            What I <span className="gradient-text">actually use</span>
           </h2>
           <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
-            A curated, battle-tested stack for full-stack products and AI-first automation —
-            led by <span className="text-accent-400 font-medium">Claude Code</span> as my primary
-            development companion.
+            Everything here is running in something I built and maintain — not a list of
+            tutorials I finished.
           </p>
         </div>
 

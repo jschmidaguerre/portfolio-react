@@ -4,35 +4,35 @@ import { HiSparkles, HiBolt, HiCpuChip, HiCodeBracket } from 'react-icons/hi2';
 const HIGHLIGHTS = [
   {
     icon: <HiCodeBracket />,
-    title: 'Full-stack, end-to-end',
+    title: 'Backend that stays up',
     text:
-      'I ship complete products — React front-ends, Node/Python back-ends, REST APIs, databases, auth, deploys and CI. Comfortable alone across the whole stack.',
+      'FastAPI services on PostgreSQL and Redis, multi-tenant from day one. JWT/2FA, rate limiting, 250+ tests gating every merge and Sentry on the other end.',
   },
   {
     icon: <HiSparkles />,
-    title: 'SAAS builder — Spom Bridge',
+    title: 'Spom Bridge — shipped and operated solo',
     text:
-      'I designed, engineered and launched Spom Bridge, a full-stack SAAS, on my own. Product thinking, architecture, UX and delivery under one hat.',
-  },
-  {
-    icon: <HiBolt />,
-    title: 'AI-First workflow',
-    text:
-      'Every project is engineered with Claude Code as my core development partner. LLMs, agents and AI tooling are first-class citizens in my stack.',
+      'A multi-tenant e-invoicing SaaS I architected, built and still run: 40+ domain modules, real customers, real money moving through it.',
   },
   {
     icon: <HiCpuChip />,
-    title: 'Automation with real ROI',
+    title: 'Integrations nobody wants to touch',
     text:
-      'Python, Document AI/OCR, SAP integrations and scraping engines that cut operational time by up to 70% with measurable business impact.',
+      "Argentina's tax authority over SOAP — certificate signing, ambiguous errors, no idempotency. Solved with idempotency keys, bounded retries and a reconciliation state machine.",
+  },
+  {
+    icon: <HiBolt />,
+    title: 'LLMs where they actually pay off',
+    text:
+      'Document AI and OCR layered with an LLM to turn messy pharma paperwork into clean structured JSON — cutting operational time by up to 70%.',
   },
 ];
 
 const STATS = [
-  { value: 'Spom', label: 'Full-stack SAAS I built solo' },
-  { value: 'AI-First', label: 'Engineering philosophy' },
+  { value: 'Spom', label: 'Multi-tenant SaaS, built & operated solo' },
+  { value: '40+', label: 'Domain modules in production' },
   { value: '70%', label: 'Ops time reduced at Scienza' },
-  { value: '5+', label: 'Years building across the stack' },
+  { value: '250+', label: 'Automated tests gating CI' },
 ];
 
 const AboutMe = () => {
@@ -43,34 +43,42 @@ const AboutMe = () => {
           <div className="lg:col-span-5">
             <span className="section-eyebrow">About me</span>
             <h2 className="section-title">
-              Full-stack developer who{' '}
-              <span className="gradient-text">ships products</span>
+              I don&apos;t just ship it —{' '}
+              <span className="gradient-text">I keep it running</span>
             </h2>
 
             <p className="mt-6 text-lg text-slate-300 leading-relaxed">
               I&apos;m <span className="text-white font-semibold">Juan Segundo Schmid Aguerre</span>,
-              a 23-year-old <span className="text-white font-semibold">full-stack developer</span>{' '}
-              and Systems Engineering student from Buenos Aires, Argentina. I build products
-              end-to-end — from architecture to the pixel — with a strong{' '}
-              <span className="text-accent-400 font-medium">AI-First</span> philosophy.
+              a <span className="text-white font-semibold">backend engineer</span> in Buenos Aires
+              working in <span className="text-accent-400 font-medium">Python and FastAPI</span>.
+              Most of what I enjoy sits where systems meet the real world: third-party APIs that
+              lie to you, data that arrives malformed, and money that has to reconcile at the end
+              of the day.
             </p>
 
             <p className="mt-4 text-slate-400 leading-relaxed">
-              My flagship project is{' '}
-              <span className="text-accent-400 font-medium">Spom Bridge</span>, a full-stack SAAS
-              I designed, built and shipped completely solo — front-end, back-end, database,
-              auth, payments and deploy. In parallel, I lead{' '}
+              My flagship is{' '}
+              <span className="text-accent-400 font-medium">Spom Bridge</span>, a multi-tenant
+              e-invoicing SaaS I architected, built and still operate on my own — front-end,
+              back-end, database, auth and deploy. It talks to{' '}
+              <span className="text-slate-200 font-medium">AFIP/ARCA over SOAP</span>, Mercado
+              Libre, Tiendanube and Mercado Pago, and it has to be right every time: an invoice
+              that fails silently is a legal problem, not a bug report.
+            </p>
+
+            <p className="mt-4 text-slate-400 leading-relaxed">
+              In parallel I lead{' '}
               <span className="text-slate-200 font-medium">automation &amp; AI at Scienza Argentina</span>,
-              where I re-architected the entire pharma document-reception workflow with Document
-              AI, OCR and Python pipelines.
+              where I rebuilt the pharma document-reception pipeline with Document AI, OCR and an
+              LLM layer. Before that I was a Functional Analyst at{' '}
+              <span className="text-slate-200 font-medium">Whirlpool</span>, which is where I
+              learned to ask what the business actually needs before writing anything. I work with
+              coding agents daily — with the tests, CI and review discipline that makes that safe.
             </p>
 
             <p className="mt-4 text-slate-400 leading-relaxed">
-              Previously, I worked as a Functional Analyst at{' '}
-              <span className="text-slate-200 font-medium">Whirlpool Corporation</span>, bridging
-              IT and business in Agile teams. Across every stack and role, I build with{' '}
-              <span className="text-accent-400 font-medium">Claude Code</span> at the center of
-              my workflow — shipping faster, safer and at a higher bar than I could alone.
+              I&apos;m looking for <span className="text-white font-semibold">remote backend / AI
+              roles</span>. Buenos Aires is GMT-3 — a full overlap with US Eastern business hours.
             </p>
 
             <div className="mt-8 grid grid-cols-2 gap-4">

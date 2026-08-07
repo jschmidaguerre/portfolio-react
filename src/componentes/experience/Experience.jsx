@@ -3,31 +3,43 @@ import { FaBriefcase } from 'react-icons/fa';
 
 const experiences = [
   {
-    role: 'Process Analyst — Automation & AI',
+    role: 'Founder & Lead Engineer',
+    company: 'Spom Bridge — Spom Solutions',
+    sector: 'Independent SaaS product · Live in production',
+    period: '2025 — Present',
+    highlights: [
+      'Architected and operate a multi-tenant SaaS in production on FastAPI, PostgreSQL and Redis, containerized with Docker on Railway — 40+ domain modules with strict per-tenant data isolation.',
+      'Integrated the AFIP/ARCA SOAP web services (WSAA certificate signing, WSFE invoice authorization) so every sale is invoiced with no manual step — solved the non-idempotent tax API with per-document idempotency keys, token caching, bounded retries and a reconciliation state machine.',
+      'Built OAuth2 connectors and signed-webhook consumers for Mercado Libre, Tiendanube and Mercado Pago, keeping orders, catalog and payments in sync in near real time.',
+      'Shipped production-grade security — JWT, 2FA, CSRF protection and rate limiting — and held quality with 250+ automated tests, CI gating every merge and Sentry-based observability.',
+      'Built the React 18 + TypeScript front-end end to end, from design system to release.',
+    ],
+    tags: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Docker', 'React', 'TypeScript', 'Sentry'],
+  },
+  {
+    role: 'Automation & AI Developer',
     company: 'Scienza Argentina',
-    sector: 'Pharmaceutical',
+    sector: 'Pharmaceutical distribution',
     period: 'Feb 2025 — Present',
     highlights: [
-      'Re-architected the full pharmacy document-reception pipeline with Document AI & OCR, eliminating manual data entry.',
-      'Built Python automations reducing operational time by up to 70% across critical processes.',
-      'Delivered Pandas/SQL data pipelines feeding automated executive dashboards.',
-      'Integrated SAP through Python scripts to orchestrate mission-critical workflows.',
-      'Shipped REST APIs in Flask connecting multiple enterprise systems.',
-      'Developed Selenium-based scraping engines for competitive intelligence.',
-      'Presented measurable ROI results directly to C-Level stakeholders.',
+      'Re-architected the pharmacy document-reception pipeline with Document AI & OCR, removing manual data entry from a high-volume, compliance-sensitive process.',
+      'Layered an LLM over raw OCR output to raise extraction accuracy and emit schema-validated JSON consumed directly by downstream enterprise systems.',
+      'Built Python automations reducing operational time by up to 70% across business-critical processes.',
+      'Integrated SAP through Python and shipped Flask REST APIs connecting multiple enterprise systems.',
+      'Delivered Pandas/SQL pipelines feeding automated executive dashboards, with measurable ROI presented directly to C-Level stakeholders.',
     ],
-    tags: ['Python', 'Document AI', 'OCR', 'Pandas', 'Flask', 'SAP', 'Selenium', 'LLMs'],
+    tags: ['Python', 'Document AI', 'OCR', 'LLMs', 'Pandas', 'Flask', 'SAP', 'Selenium'],
   },
   {
     role: 'Functional Analyst',
     company: 'Whirlpool Corporation',
-    sector: 'Consumer goods / Manufacturing',
+    sector: 'Fortune 500 · Manufacturing',
     period: 'Jan 2024 — Feb 2025',
     highlights: [
-      'Analyzed and documented requirements for digital transformation projects.',
-      'Implemented Agile/Scrum practices across multidisciplinary teams.',
-      'Designed technology solutions and optimized production processes.',
-      'Coordinated IT and business areas to deliver operational improvements.',
+      'Gathered and documented requirements for digital transformation projects, translating business needs into technical specifications for development teams.',
+      'Implemented Agile/Scrum practices across multidisciplinary IT and business teams.',
+      'Designed technology solutions and process improvements for production operations.',
+      'Coordinated IT and business stakeholders from analysis through go-live.',
     ],
     tags: ['Agile/Scrum', 'Requirements', 'Process Design', 'Digital Transformation'],
   },
@@ -40,11 +52,11 @@ const Experience = () => {
         <div className="text-center mb-14">
           <span className="section-eyebrow">Experience</span>
           <h2 className="section-title">
-            Work that <span className="gradient-text">delivers impact</span>
+            Where I&apos;ve <span className="gradient-text">shipped</span>
           </h2>
           <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
-            From Fortune-500 manufacturing to pharma-grade automation — where software meets
-            measurable business outcomes.
+            A SaaS I run in production, pharma-grade AI automation, and a Fortune 500 where I
+            learned to start from the business problem.
           </p>
         </div>
 

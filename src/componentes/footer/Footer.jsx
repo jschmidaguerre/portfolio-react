@@ -17,8 +17,8 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-sm text-slate-400 leading-relaxed">
-              AI-First full-stack developer, SAAS builder and Systems Engineer from Buenos Aires,
-              Argentina.
+              Python backend &amp; AI engineer in Buenos Aires, Argentina. Open to remote roles
+              across US and European teams (GMT-3).
             </p>
           </div>
 
@@ -88,8 +88,8 @@ const Footer = () => {
         <div className="mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row gap-3 justify-between items-center text-xs text-slate-500">
           <p>© {new Date().getFullYear()} Juan Segundo Schmid Aguerre. All rights reserved.</p>
           <p className="font-mono">
-            Built with React + Tailwind · engineered with{' '}
-            <span className="text-accent-400">Claude Code</span>
+            Built with React + Tailwind ·{' '}
+            <span className="text-accent-400">Buenos Aires, GMT-3</span>
           </p>
         </div>
       </div>

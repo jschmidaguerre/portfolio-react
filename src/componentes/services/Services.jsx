@@ -10,47 +10,47 @@ import {
 
 const services = [
   {
-    icon: <HiCodeBracket />,
-    title: 'Full-Stack Product Development',
+    icon: <HiRectangleStack />,
+    title: 'API & service design',
     text:
-      'End-to-end product engineering — React/Next.js front-ends, Node/Python back-ends, REST APIs, databases, auth and deploy. From zero to shipped SAAS like Spom Bridge.',
-    tags: ['React', 'Next.js', 'Node.js', 'Python', 'REST APIs'],
-  },
-  {
-    icon: <HiSparkles />,
-    title: 'AI-First Engineering',
-    text:
-      'I build every project with an AI-First mindset, using Claude Code as my core development partner. LLMs, AI agents and Document AI integrated as first-class citizens of the stack.',
-    tags: ['Claude Code', 'LLMs', 'AI Agents', 'RAG', 'Prompt Engineering'],
+      'FastAPI and Flask services built to be operated: versioned REST contracts, OAuth2, JWT/2FA, rate limiting, structured logging and OpenAPI docs that stay in sync with the code.',
+    tags: ['FastAPI', 'Flask', 'REST', 'OAuth2', 'OpenAPI'],
     highlight: true,
   },
   {
-    icon: <HiCpuChip />,
-    title: 'Process Automation',
+    icon: <HiCodeBracket />,
+    title: 'Multi-tenant architecture',
     text:
-      'Python automations that eliminate manual workflows. Document AI, OCR, Pandas/SQL pipelines and SAP integrations that deliver up to 70% operational time savings.',
-    tags: ['Python', 'OCR', 'Document AI', 'SAP', 'RPA'],
+      'Per-tenant data isolation, scoped queries and migrations that do not break customer N while shipping for customer N+1. 40+ domain modules running under one roof in Spom Bridge.',
+    tags: ['PostgreSQL', 'SQLAlchemy', 'Redis', 'Alembic'],
   },
   {
     icon: <HiCommandLine />,
-    title: 'Web Scraping & Data Extraction',
+    title: 'Integrations that survive production',
     text:
-      'Selenium-powered scraping engines for competitive intelligence and data pipelines. Clean, structured data ready for BI and ML downstream.',
-    tags: ['Selenium', 'Pandas', 'Scraping', 'ETL'],
+      'SOAP and REST against systems you do not control — idempotency keys, token caching, bounded retries, signed webhooks and reconciliation when the other side disagrees with you.',
+    tags: ['SOAP', 'Webhooks', 'Idempotency', 'OAuth2'],
   },
   {
-    icon: <HiRectangleStack />,
-    title: 'REST APIs & Integrations',
+    icon: <HiSparkles />,
+    title: 'LLM & Document-AI pipelines',
     text:
-      'Robust Flask/Django/Express APIs that connect enterprise systems, third-party services and AI providers. Auth, rate limiting, observability and documentation out of the box.',
-    tags: ['Flask', 'Django', 'Express', 'OpenAPI'],
+      'OCR output is messy; an LLM layer on top turns it into schema-validated JSON downstream systems can trust. Built for pharma document intake handling real compliance requirements.',
+    tags: ['Claude API', 'Document AI', 'AWS Textract', 'Structured output'],
+  },
+  {
+    icon: <HiCpuChip />,
+    title: 'Python automation',
+    text:
+      'Pipelines that remove manual steps from business-critical workflows — SAP integration, Pandas/SQL transforms and scheduled jobs. Up to 70% operational time saved at Scienza.',
+    tags: ['Python', 'Pandas', 'SAP', 'ETL'],
   },
   {
     icon: <HiPresentationChartLine />,
-    title: 'Executive Dashboards & Analytics',
+    title: 'Testing & observability',
     text:
-      'Pandas/SQL pipelines feeding automated dashboards with ROI-driven KPIs. Built for C-Level audiences and fast executive decision-making.',
-    tags: ['Pandas', 'SQL', 'BI', 'Data Viz'],
+      '250+ automated tests gating every merge, Sentry on the other end, and CI that refuses to ship red. Shipping fast only counts if you find out when it breaks.',
+    tags: ['Pytest', 'CI/CD', 'Sentry', 'Docker'],
   },
 ];
 
@@ -59,13 +59,13 @@ const Services = () => {
     <section id="services" className="relative py-24 border-y border-white/5 bg-ink-800/40">
       <div className="container-narrow">
         <div className="text-center mb-14">
-          <span className="section-eyebrow">What I do</span>
+          <span className="section-eyebrow">What I work on</span>
           <h2 className="section-title">
-            Services with an <span className="gradient-text">AI-First</span> edge
+            The parts I&apos;m <span className="gradient-text">actually good at</span>
           </h2>
           <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
-            I partner with teams that want to ship faster, automate smarter and build products
-            that leverage AI from day one — not as an afterthought.
+            Not a menu — this is where I&apos;ve spent the hours and what I&apos;d want to be doing
+            on your team.
           </p>
         </div>
 
